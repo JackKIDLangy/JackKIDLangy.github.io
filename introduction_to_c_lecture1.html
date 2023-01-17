@@ -51,6 +51,98 @@ Furthermore, programming languages are designed to be executed by computers, so 
 
 In summary, programming languages are generally considered to be simpler and more straightforward than natural languages because they are designed to be unambiguous and to perform specific tasks. They are based on a set of rules and conventions that make the code easy to understand and reduce the chances of errors. Furthermore, programming languages are designed to be executed by computers, making them more precise and logical than natural languages, making them easier to automate repetitive tasks and create complex systems.
                 </p>
+
+                <p>
+                    <h2>C1-2 Let's start learning C!</h2><br>
+C programs are made up of a collection of functions.<br>
+
+In C programming language, a function is a block of code that performs a specific task and can be called from other parts of the program. Functions are used to organize and modularize code, making it easier to understand and maintain. Functions in C have a specific name and a set of parameters, which are variables that are passed to the function when it is called.
+
+A function in C typically starts with the keyword "void" or "int" followed by the function name, which is a unique identifier that is used to call the function. The function name is followed by a set of parentheses that contains the parameters, and a set of curly braces that enclose the function's code. The code inside the function performs the task that the function is designed to perform, and it can include variables, data types, control structures, and other elements of the C language.
+
+Functions in C can also return a value to the part of the program that called them. If the function is declared with the keyword "int" it means that it will return an integer value. If the function is declared with the keyword "void" it means that it will not return any value.
+
+C programs are typically composed of one or more functions that are grouped together to form a program. Each function is designed to perform a specific task, and the functions are called in sequence to perform the tasks that make up the program. This allows for code reuse and makes it easy to understand and maintain the program.
+
+In summary, A function in C programming language is a block of code that performs a specific task and can be called from other parts of the program. Functions have a specific name and a set of parameters, and they can return a value to the part of the program that called them. C programs are typically composed of one or more functions, each function is designed to perform a specific task, and the functions are called in sequence to perform the tasks that make up the program. This allows for code reuse and makes it easy to understand and maintain the program.
+
+In C programming language, a function is typically defined by using the keyword "void" or "int" followed by the function name, which is a unique identifier that is used to call the function. The function name is followed by a set of parentheses that contains the parameters, if any. The parameters are variables that are passed to the function when it is called. And a set of curly braces that enclose the function's code.
+
+For example, a simple function that takes two integer parameters, adds them together, and returns the result can be written as follows:
+'''C
+int add(int x, int y) {
+    int result = x + y;
+    return result;
+}
+'''
+In this example, the function is named "add", it takes two integer parameters "x" and "y", inside the curly braces the variables "x" and "y" are added together and the result is stored in the variable "result", finally the value of "result" is returned.
+
+A function that doesn't return any value is typically defined as follows:
+'''C
+void print_hello() {
+    printf("Hello World!\n");
+}
+'''
+In this example, the function is named "print_hello" and it doesn't take any parameters, the function just prints "Hello World!" on the screen using the printf function.
+
+It's important to note that in C the main function is the entry point of the program, and it's the function where the execution of the program begins, and it's typically defined as follows:
+'''C
+int main() {
+    //Code goes here
+    return 0;
+}
+'''
+The main function returns an integer value, it doesn't take any parameters and it's where the rest of the program is executed.
+
+In summary, A function in C is typically defined by using the keyword "void" or "int" followed by the function name, which is a unique identifier that is used to call the function, it takes a set of parameters if any, and a set of curly braces that enclose the function's code. A simple example of a function that takes two integer parameters, adds them together, and returns the result, and a function that doesn't return any value and just print "Hello World!" is provided. The main function is the entry point of the program and it's where the execution of the program begins.
+
+In C programming language, a type name refers to the data type of a value that a function can return or a variable can hold. C has a set of built-in data types such as integer (int), floating-point (float), and character (char) which can be used to declare variables and function return types. The type name specifies the range of values and the amount of memory that a variable or function can use.
+
+For example, the "int" type name is used to define variables that can hold integer values, such as whole numbers. The "float" type name is used to define variables that can hold floating-point values, such as decimal numbers. The "char" type name is used to define variables that can hold single characters.
+
+When a function is defined, the type name is specified before the function name to indicate the type of value that the function will return. For example, if a function is declared with the "int" type name, it means that the function will return an integer value. If a function is declared with the "void" type name, it means that the function will not return any value.
+
+When a variable is defined, the type name is specified before the variable name to indicate the type of value that the variable can hold. For example, if a variable is declared with the "int" type name, it means that the variable can hold integer values.
+
+In summary, in C programming language, a type name refers to the data type of a value that a function can return or a variable can hold. C has a set of built-in data types such as integer, floating-point, and character which can be used to declare variables and function return types. The type name specifies the range of values and the amount of memory that a variable or function can use. When a function or variable is defined, the type name is specified before the function or variable name to indicate the type of value that the function or variable can hold or return.
+
+In C programming language, the function name is a unique identifier that is used to call the function. The function name is used to reference the specific function, and it follows certain rules and conventions when naming a function.
+
+The function name must begin with a letter or an underscore (_) and can contain letters, digits, and underscores. The name should be meaningful and reflective of the purpose of the function. For example, if a function calculates the sum of two numbers, it could be named "sum" or "add".
+
+C naming conventions suggest that function names should be in lowercase letters, and multiple words should be separated by an underscore(_). This is to improve code readability and maintain consistency across the program.
+
+It's important to note that C has a set of keywords, which are reserved words that have a special meaning in the language, and cannot be used as function names or variables. These keywords include "int", "float", "char", "if", "for", "while" among others.
+
+In summary, In C programming language, the function name is a unique identifier that is used to call the function. The function name follows certain rules and conventions when naming a function, such as it must begin with a letter or an underscore (_) and can contain letters, digits, and underscores.
+
+In the C programming language, an argument is a value passed to a function when it is called. When defining a function, the programmer specifies the number and type of arguments that the function takes, and when the function is called, the actual values for these arguments are passed in. These values are then used by the function to perform its operations. Arguments can be of any data type, including basic types like integers and floats, as well as more complex types like arrays and structs. The number of arguments passed in must match the number of arguments expected by the function, and the types of the arguments must match the types specified in the function definition.
+
+In the C programming language, processing refers to the execution of instructions in a program. These instructions can include things like arithmetic operations, data manipulation, and control flow statements. The main function of a C program is executed sequentially, starting from the first instruction and proceeding line by line until the end of the function is reached. Within functions, instructions can be grouped together in blocks, which are executed in the order they appear. The instructions that make up a program are written in a specific syntax, and when the program is compiled, the instructions are translated into machine code that can be executed by the computer's CPU. The C standard library also provides a set of functions that can perform common processing tasks like input/output, memory allocation and string manipulation.
+
+In the C programming language, the return statement is used to exit a function and return a value to the calling function. The value returned can be of any data type, such as an integer, floating point, or a pointer. The return statement can also be used without a value, in which case the function simply exits without returning a value. The use of the return statement is optional, but if a function has a return type other than void, it must return a value or the program will generate a compile-time error. The return statement can also be used in conjunction with the return code to indicate the status of the function, with a code of 0 indicating success and a non-zero code indicating an error.
+
+Summary and HelloWorld
+
+One of the most simple and well-known programs in C is the "Hello, World!" program. It is typically used as a first program for beginners learning C programming. Here is an example of the "Hello, World!" program in C:
+'''C
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+'''
+This program starts with the #include statement, which is a preprocessor directive that includes the standard input/output library in the program. This library contains the printf() function, which is used to display output to the screen.
+
+The main() function is the entry point of the program and is where the program execution begins. The int before main indicates that the function returns an integer value, but in this case, we are not returning any value, hence return 0.
+
+Inside the main() function, we have the printf("Hello, World!\n"); statement, which uses the printf() function to display the string "Hello, World!" followed by a newline character on the screen. The \n at the end of the string is a special character called an escape sequence that represents a newline, which causes the cursor to move to the next line.
+
+Finally, the return 0; statement at the end of the main() function is used to exit the program and return a value of 0 to the operating system. This value is known as the return code and is used to indicate the status of the program, with a code of 0 indicating success and a non-zero code indicating an error.
+
+In summary, the "Hello, World!" program in C is a simple program that uses the printf() function from the standard input/output library to display a string on the screen and then exits the program using the return 0; statement. It is used as a first program to help beginners understand the basic structure of a C program and learn how to display output to the screen.
+                </p>
             </section>
         </article>
         <footer></footer>
