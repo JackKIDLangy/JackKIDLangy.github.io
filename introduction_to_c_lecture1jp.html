@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="utf-8">
+        <title>横田健太のC言語入門</title>
+        <link rel="stylesheet"  type="text/css" href="style.css">
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        <article>
+            <h1>横田健太のC言語入門第1講</h1>
+            <section>
+                <h2>第1講</h2>
+                <p>
+                    <h2>C1-1 C言語とは何か</h2><br>
+C言語は1970年代の初めあたりにアメリカ合衆国のベル研究所(Bell Laboratories))に所属していたデニス・リッチー(Dennis Ritchie)が開発した高レベルなプログラミング言語です。<br>
+C言語は複雑な処理を高速で効率的に実行できるのでゲーム開発やコンピュータグラフィックス(computer graphics、略称: CG)、金融業界のソフトウエアなど様々な分野で幅広く使われています。<br>
+<h2>みなさんがC言語をこれから学ぶにあたって大切なこと</h2><br>
+
+C言語をこれからこの本で学ぶみなさんに、その学習で大切なことをいくつか紹介します。C言語では他のプログラミング言語でも同じことがいくつかあるでしょうが、変数やデータ型、制御構成(制御構造)、関数などの基本的な文法事項をちゃんちゃんと理解しなければなりません。<br>
+
+また、後の方で本格的に学びますが、ポインタとメモリの関係性などを理解するのも同様に大切なことです。今ここでポインタを完全に理解することはできないので後でやりますが、ポインタというものはC言語において基本的な文法事項の1つであり、ポインタを使えばメモリ上のアドレスに直接アクセスするこすることを可能にしますが、正しく使用しなかったら(間違った使い方をすればエラーの原因になります。それは他の文法項目でも同じですから、みなさんが今後C言語で何か開発をする際にはそういった文法を理解することは必須であり、この本を読む価値のひとつはまさにそれです。メモリというものが今なんなのかさえもわからない人が読者の中にはいるかもしれませんが、後ほど解説しますから安心してください。C言語ではメモリの確保と解放の原理について理解することもエラーを避けるために重要なのです。<br>
+
+さらに、C言語はアプリケーション開発のための沢山の種類のライブラリやフレームワークがあり、標準ライブラリや特定の、趣味や実務に関係なく何かしらのアプリケーションなどを開発する際に使うことが必要または使うことが一般的に推奨されるような他のライブラリを知ることも重要なのです。<br>
+
+さらに付け加えるとまた他のプログラミング言語でも大抵は同じことなのですがここでまず強調しておきたいこととして、実際にこの本で学んだことを自分の頭で考える、つまり試行錯誤をしながら実践するのもまた重要です。Ｃ言語は素晴らしい言語で、とても強力で処理が高速で効率的と言えますが、その分(と言ったらいいかわかりませんが)Ｃ言語を実際に使いこなすには常に細かいところにまで様々な観点で気を配り、そして訓練する必要があります。例えば他人が書いたコードを読み理解してそれを自分で再現するということに挑戦すれば、Ｃ言語の理解はどんどん深まるでしょう。なのでこの本意外でインターネットや他の本のC言語コードを読んでみるのはとてもおすすめです。<br>
+
+まとめると、C言語は、本当にこれを聞いているあなたはくどくてうんざりするでしょうが素晴らしい言語ではあるものの、まず基本的な概念をしっかりと理解し、エラーやバグを作らないように細かいところまで意識しなければならないですし、ポインタとメモリの関係性や標準ライブラリもちゃんと知りそして理解し、練習を重ねることが、Ｃ言語をあなたが習得するために必要なのです。<br>
+
+<br><h2>What is source code in C language?</h2><br>
+
+In C programming language, a program or source code is a set of instructions written in the C language that a computer can execute. It consists of a series of statements, which are executed sequentially, and can include variables, data types, control structures, and functions. The source code is written in a text editor and is then compiled, which is the process of converting the source code into machine code that the computer can understand and execute. The output of the compilation process is an executable file, which can be run on a computer.<br>
+
+A C program usually consists of one or more source files, and each source file contains one or more functions. The main function is the entry point of the program, and it is where the execution of the program begins. C programs also make use of libraries, which are pre-written code that can be reused to perform common tasks, such as input and output operations, mathematical calculations, and memory management.<br>
+
+The source code of a C program can be divided into two main parts: the preprocessor directives and the main body of the program. The preprocessor directives starts with the "#" symbol and are used to include headers, define macros, and perform other operations before the actual compilation of the code. The main body of the program is where the actual code of the program is written, and it consists of variables, functions, control structures, and other elements of the C language.<br>
+
+In summary, A C program or source code is a set of instructions written in the C language that a computer can execute. It's composed of one or more source files, that contains one or more functions and it makes use of libraries. The source code can be divided into two main parts: the preprocessor directives and the main body of the program. The preprocessor directives are used before the compilation and the main body of the program contains the actual code of the program.<br>
+
+<br><h2>Natural and programming languages</h2><br>
+
+Programming languages are generally considered to be simpler and more straightforward than natural languages because they are designed to be unambiguous and to perform specific tasks. Programming languages are based on a set of rules and conventions that are designed to make the code easy to understand and to reduce the chances of errors. These rules and conventions, such as syntax, data types, and control structures, are consistent across all programs written in that language, and this consistency makes it easy to learn and understand the language.<br>
+
+In contrast, natural languages are complex and varied, and their meanings can depend on context, tone, and other factors. Natural languages are also subject to change over time and across cultures, making them difficult to learn and understand. Additionally, there are many ambiguities and exceptions in natural languages that make it difficult to convey precise meaning, while programming languages have clear and specific instructions.<br>
+
+Furthermore, programming languages are designed to be executed by computers, so they are more precise and logical than natural languages. This makes it easier to automate repetitive tasks and to create complex systems. While natural languages are used for communication and expression, programming languages are used to create software, which can be executed and will perform the intended task.<br>
+
+In summary, programming languages are generally considered to be simpler and more straightforward than natural languages because they are designed to be unambiguous and to perform specific tasks. They are based on a set of rules and conventions that make the code easy to understand and reduce the chances of errors. Furthermore, programming languages are designed to be executed by computers, making them more precise and logical than natural languages, making them easier to automate repetitive tasks and create complex systems.<br>
+                </p>
+                あぷりあぷり
+                    <h2>C1-2 Let's start learning C!</h2><br>
+<h2>C programs are made up of a collection of functions.</h2><international
+
+In C programming language, a function is a block of code that performs a specific task and can be called from other parts of the program. Functions are used to organize and modularize code, making it easier to understand and maintain. Functions in C have a specific name and a set of parameters, which are variables that are passed to the function when it is called.<br>
+
+A function in C typically starts with the keyword "void" or "int" followed by the function name, which is a unique identifier that is used to call the function. The function name is followed by a set of parentheses that contains the parameters, and a set of curly braces that enclose the function's code. The code inside the function performs the task that the function is designed to perform, and it can include variables, data types, control structures, and other elements of the C language.<br>
+
+Functions in C can also return a value to the part of the program that called them. If the function is declared with the keyword "int" it means that it will return an integer value. If the function is declared with the keyword "void" it means that it will not return any value.<br>
+
+C programs are typically composed of one or more functions that are grouped together to form a program. Each function is designed to perform a specific task, and the functions are called in sequence to perform the tasks that make up the program. This allows for code reuse and makes it easy to understand and maintain the program.<br>
+
+In summary, A function in C programming language is a block of code that performs a specific task and can be called from other parts of the program. Functions have a specific name and a set of parameters, and they can return a value to the part of the program that called them. C programs are typically composed of one or more functions, each function is designed to perform a specific task, and the functions are called in sequence to perform the tasks that make up the program. This allows for code reuse and makes it easy to understand and maintain the program.<br>
+
+In C programming language, a function is typically defined by using the keyword "void" or "int" followed by the function name, which is a unique identifier that is used to call the function. The function name is followed by a set of parentheses that contains the parameters, if any. The parameters are variables that are passed to the function when it is called. And a set of curly braces that enclose the function's code.<br>
+
+For example, a simple function that takes two integer parameters, adds them together, and returns the result can be written as follows:<br>
+<pre>
+    <code>
+        int add(int x, int y) {
+            int result = x + y;
+            return result;
+        }
+    </code>
+</pre>
+<br>
+In this example, the function is named "add", it takes two integer parameters "x" and "y", inside the curly braces the variables "x" and "y" are aあぷりあぷりd together and the result is stored in the variable "result", finally the value of "result" is returned.<br>
+
+A function that doesn't return any value is typically defined as follows:<br>
+<pre>
+    <code>
+        void print_hello() {
+            printf("Hello World!\n");
+        }
+    </code>
+</pre>
+<br>
+In this example, the function is named "print_hello" and it doesn't take any parameters, the function just prints "Hello World!" on the screen using the printf function.<br>
+
+It's important to note that in C the main function is the entry point of the program, and it's the function where the execution of the program begins, and it's typically defined as follows:<br>
+<pre>
+    <code>
+        int main() {
+            //Code goes here
+            return 0;
+        }
+    </code>
+</pre>
+<br>
+The main function returns an integer value, it doesn't take any parameters and it's where the rest of the program is executed.<br>
+
+In summary, A function in C is typically defined by using the keyword "void" or "int" followed by the function name, which is a unique identifier that is used to call the function, it takes a set of parameters if any, and a set of curly braces that enclose the function's code. A simple example of a function that takes two integer parameters, adds them together, and returns the result, and a function that doesn't return any value and just print "Hello World!" is provided. The main function is the entry point of the program and it's where the execution of the program begins.<br>
+
+In C programming language, a type name refers to the data type of a value that a function can return or a variable can hold. C has a set of built-in data types such as integer (int), floating-point (float), and character (char) which can be used to declare variables and function return types. The type name specifies the range of values and the amount of memory that a variable or function can use.<br>
+
+For example, the "int" type name is used to define variables that can hold integer values, such as whole numbers. The "float" type name is used to define variables that can hold floating-point values, such as decimal numbers. The "char" type name is used to define variables that can hold single characters.<br>
+
+When a function is defined, the type name is specified before the function name to indicate the type of value that the function will return. For example, if a function is declared with the "int" type name, it means that the function will return an integer value. If a function is declared with the "void" type name, it means that the function will not return any value.<br>
+
+When a variable is defined, the type name is specified before the variable name to indicate the type of value that the variable can hold. For example, if a variable is declared with the "int" type name, it means that the variable can hold integer values.<br>
+
+In summary, in C programming language, a type name refers to the data type of a value that a function can return or a variable can hold. C has a set of built-in data types such as integer, floating-point, and character which can be used to declare variables and function return types. The type name specifies the range of values and the amount of memory that a variable or function can use. When a function or variable is defined, the type name is specified before the function or variable name to indicate the type of value that the function or variable can hold or return.<br>
+
+In C programming language, the function name is a unique identifier that is used to call the function. The function name is used to reference the specific function, and it follows certain rules and conventions when naming a function.<br>
+
+The function name must begin with a letter or an underscore (_) and can contain letters, digits, and underscores. The name should be meaningful and reflective of the purpose of the function. For example, if a function calculates the sum of two numbers, it could be named "sum" or "add".<br>
+
+C naming conventions suggest that function names should be in lowercase letters, and multiple words should be separated by an underscore(_). This is to improve code readability and maintain consistency across the program.<br>
+
+It's important to note that C has a set of keywords, which are reserved words that have a special meaning in the language, and cannot be used as function names or variables. These keywords include "int", "float", "char", "if", "for", "while" among others.<br>
+
+In summary, In C programming language, the function name is a unique identifier that is used to call the function. The function name follows certain rules and conventions when naming a function, such as it must begin with a letter or an underscore (_) and can contain letters, digits, and underscores.<br>
+
+In the C programming language, an argument is a value passed to a function when it is called. When defining a function, the programmer specifies the number and type of arguments that the function takes, and when the function is called, the actual values for these arguments are passed in. These values are then used by the function to perform its operations. Arguments can be of any data type, including basic types like integers and floats, as well as more complex types like arrays and structs. The number of arguments passed in must match the number of arguments expected by the function, and the types of the arguments must match the types specified in the function definition.<br>
+
+In the C programming language, processing refers to the execution of instructions in a program. These instructions can include things like arithmetic operations, data manipulation, and control flow statements. The main function of a C program is executed sequentially, starting from the first instruction and proceeding line by line until the end of the function is reached. Within functions, instructions can be grouped together in blocks, which are executed in the order they appear. The instructions that make up a program are written in a specific syntax, and when the program is compiled, the instructions are translated into machine code that can be executed by the computer's CPU. The C standard library also provides a set of functions that can perform common processing tasks like input/output, memory allocation and string manipulation.<br>
+
+In the C programming language, the return statement is used to exit a function and return a value to the calling function. The value returned can be of any data type, such as an integer, floating point, or a pointer. The return statement can also be used without a value, in which case the function simply exits without returning a value. The use of the return statement is optional, but if a function has a return type other than void, it must return a value or the program will generate a compile-time error. The return statement can also be used in conjunction with the return code to indicate the status of the function, with a code of 0 indicating success and a non-zero code indicating an error.<br>
+
+<h2>Summary and HelloWorld</h2><br>
+
+One of the most simple and well-known programs in C is the "Hello, World!" program. It is typically used as a first program for beginners learning C programming. Here is an example of the "Hello, World!" program in C:<br>
+<pre>
+    <code>
+        #include <stdio.h>
+
+            int main() {
+                printf("Hello, World!\n");
+                return 0;
+            }
+    </code>
+</pre>
+<br>
+This program starts with the #include statement, which is a preprocessor directive that includes the standard input/output library in the program. This library contains the printf() function, which is used to display output to the screen.<br>
+
+The main() function is the entry point of the program and is where the program execution begins. The int before main indicates that the function returns an integer value, but in this case, we are not returning any value, hence return 0.<br>
+
+Inside the main() function, we have the printf("Hello, World!\n"); statement, which uses the printf() function to display the string "Hello, World!" followed by a newline character on the screen. The \n at the end of the string is a special character called an escape sequence that represents a newline, which causes the cursor to move to the next line.<br>
+
+Finally, the return 0; statement at the end of the main() function is used to exit the program and return a value of 0 to the operating system. This value is known as the return code and is used to indicate the status of the program, with a code of 0 indicating success and a non-zero code indicating an error.<br>
+
+In summary, the "Hello, World!" program in C is a simple program that uses the printf() function from the standard input/output library to display a string on the screen and then exits the program using the return 0; statement. It is used as a first program to help beginners understand the basic structure of a C program and learn how to display output to the screen.<br>
+                </p>
+            </section>
+        </article>
+        <footer></footer>
+    </body>
+</html>
