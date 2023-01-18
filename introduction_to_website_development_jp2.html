@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Simple Website</title>
+    <style>
+      /* Add styles for the whole page */
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        text-align: left; /* changed from center to left */
+      }
+      /* Add styles for the heading */
+      h1 {
+        color: #006699;
+        margin-top: 50px;
+        text-align: left; /* added to align heading to left */
+      }
+      /* Add styles for the list */
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 50px 0 0 0; /* changed from 0 auto to 50px 0 0 0 */
+        width: 100%; /* changed from 50% to 100% */
+      }
+      li {
+        background-color: #006699;
+        color: #fff;
+        margin: 10px 0;
+        padding: 10px;
+      }
+      /* Add styles for the paragraph */
+      p {
+        color: #333;
+        margin: 20px 0;
+        text-align: left; /* added to align paragraph to left */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href = "https://jackkidlangy.github.io/">Home</a></li>
+      </ul>
+    </nav>
+    <h1>Webサイト開発入門 第2講HTNMLとCSSの文法</h1>
+    <p>
+        横田健太(Kenta Yokota)
+    </p>
+    <p>
+        <h2>
+            HTMLの文法の初歩
+        </h2>
+        それでは基本的なHTMLのコードの具体例を示し、解説します。
+        <code>
+            <pre>
+                <!DOCTYPE html>
+		<html>
+ 		 <head>
+    		<title>ここにタイトル</title>
+  		</head>
+  		<body>
+    		<h1>最初のWebページ例</h1>
+    		<p>何かしらの文章</p>
+    		<ul>
+     			 <li>列挙したいもの1</li>
+      		    <li>列挙したいもの2</li>
+      		    <li>列挙したいもの3</li>
+    		</ul>
+  		</body>
+		</html>
+            </pre>
+        </code>
+
+実際にHTMLのコードを見て気づいた人は沢山いるでしょうが、不等号がコードで多く書かれていますね。
+そして不等号で始めて単語を書いて不等号で閉じるということをしています。
+そしてその不等号はすべて半角です。<br>
+この不等号こそがHTMLの本質であり、第1講で出てきたタグという概念です。そう、これをタグと呼ぶのです。<br>
+タグは不等号の次にスラッシュ(/)を入れたタグとペアで使われます。
+そのひとかたまりを要素と呼びます。<br>
+例えば先ほど示したコード内にある、<br>
+<code>
+    <li>列挙したいもの1</li>
+</code>
+が1つの要素となっています。これをli要素と呼びます。同様に、
+<code>
+    <ul>
+    <li>列挙したいもの1</li>
+    <li>列挙したいもの2</li>
+    <li>列挙したいもの3</li>
+    </ul>
+</code>
+をul要素と呼びます。新しい用語がどんどん出てきてつらいかもしれませんが、まだ続きますよ。例えば、
+<code>
+    <li>列挙したいもの1</li>
+</code>
+における<code><li></code>を開始タグと呼びます。そしてスラッシュ(/)をつけている<code></li></code>を終了タグと呼びます。<br>
+つまり、まとめると要素は開始タグと終了タグのペアで構成されています。<br>
+そしてそれぞれの要素は不等号で囲まれていて、開始タグは<code><使いたいタグの名前></code>で終了タグは<code></使いたいタグの名前></code>です。<br>
+終了タグのスラッシュ(/)を忘れないようにしてください。<br>
+まあ、僕はVisual Studio Codeを使っていますが、開始タグを書いたら自動的に終了タグが書かれるため忘れることはありませんが。<br>
+なので、Visual Studio Codeはおすすめです。<br>
+そしてそのようなエディタの機能なしでタグを実際に書くとするならば、以下の手順になります。<br>
+1. まずタグの中身つまりタグで囲みたいものの前と後ろに<code><></code>をつける。<br>
+2. 開始タグの中身つまり使いたいタグ名を書く<br>
+3. 終了タグを /使いたいタグ名 と書く、(くどいですがスラッシュ(/)を忘れずに！<br>
+といった感じでタグの一般的な使い方がわかったと思います。<br>
+
+    </p>
+
+  </body>
