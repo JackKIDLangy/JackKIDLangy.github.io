@@ -9,8 +9,9 @@ body {
 .code-container {
   border: 5px solid darkred;
   padding: 20px;
-  width: calc(100% - 40px);
-}
+  width: calc(75% - 40px);
+  margin: 0 auto;
+  }
 
 .code-title {
   background-color: gray;
