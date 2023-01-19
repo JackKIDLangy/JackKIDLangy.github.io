@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>横田健太のWebサイト開発入門 第3講</title>
+    <link rel="stylesheet" href="website_development3.css" type="text/css" media  = "all">
   </head>
   <body>
     <nav>
@@ -50,11 +51,11 @@
             <pre>
               <code>
                 h1 {
-                  font-family: "serif";
-                  font-size: 36px;
-                  font-weight: bold;
-                  text-align: center;
-                  color: #8B0000;
+                  font-family&#58; "Yu Mincho"&#59;
+                  font-size&#58; 36px&#59;
+                  font-weight: bold&#59;
+                  text-align&#58; center&#59;
+                  color&#58; #8B0000&#59;
                 }
               </code>
             </pre>
@@ -64,7 +65,7 @@
             そういう行為の対象となるHTMLのある要素を1つ決めるのです。この部分をCSSではセレクターと言います。<br>
             第2行目はフォントファミリーの指定をしているのですが、ざっくり言えばフォントファミリーとはHTMLの文字の種類を指定するようなプロパティが書かれています。じゃあプロパティってなんやねんっていうと、
             要素のスタイルを指定するものです。だから、font-family:	&quot;フォント名	&quot; って書くとフォントが指定できるのです。僕はserifにしてみました。なんでって?ググって出てきたものからテキトーに選んだだけで意味なんてないですよ（笑）。
-            第3行目では何をしているのかはもう簡単で、フォントの大きさを指定しています。<br>
+            第3行目では何をしているのかはもう簡単で、フォントの大きさを指定しています。36pxというのはプロパティ値と言います。単に値とも言います。<br>
             第4行目はフォントを太字にしています。<br>
             第5行目では文字列を中央に寄せています。WordやPowerPointなんか使っている人ならすぐわかりますね、
             そういうことだってCSSではできるのです。<br>
@@ -96,7 +97,48 @@
             ここまでの内容を図解すればこんな感じです。<br>
             <img src="C:\Users\Kenta Yokota\JackKIDLangy\JackKIDLangy.github.io\a_diagram_3_1.png" width="1000" height="700">
         </p>
-     
+        <h2>
+          CSSを実際にHTMLに適用する
+        </h2>
+        <p>
+          実際にCSSのコードは書きましたが、書いたらそれがそのまますぐ反映されるわけではないのです。つまりCSSをHTMLに関連付けるといったことが必要となるわけです。そのためにはまずHTMLのコードに付け加えないといけないコードがあるので実際にやってみましょう。
+        </p>
+        <p>
+          僕は今まさにこのページのHTMLコードに先ほど作成したCSSファイルつまりwebsite_development3.cssを適用させます。その手順はこのような形となります。
+        </p>
+        <p>
+          <ol>
+            <li>
+              まずCSSファイルを書く。これはもうやりましたね、当たり前ですが一応言っておきました。作ってない人は僕のコードをコピペしたりあるいは改変したりしても構わないのでとりあえずCSSファイルをまず作ってください。もちろん、拡張子は「&#046;css」にしてくださいね。
+            </li>
+            <li>
+              link要素をHTMLのheadタグの中に書く。
+              link要素はHTMLのコードと外部のファイルやページ、それはCSSだけでなく画像などでも使うのですが、
+              そういったものを関連付ける機能があります。
+              それはもう名前から明らかですね。そして具体的にはこう書きます。
+              <pre>
+                <code>
+                  &lt;link rel=&quot;stylesheet&quot; href=&quot;website_development3.css&quot; type=&quot;text/css&quot; media  = &quot;all&quot;&gt;
+                </code>
+              </pre>
+              といった感じで書きます。詳しく説明すると、relもhrefもtypeもmediaもすべてlink要素です。それぞれは下記の機能を持っています。<br>
+              <ul>
+                <li>
+                  rel属性 &#58; リンクのタイプを指定していて、今回はstylesheetです。これは他にもHTMLでa要素を使ってHTMLのページでリンクを誰でも飛べるようにするといったときにも活躍します。relationの略称です、多分ね。
+                </li>
+                <li>
+                  href属性 &#58; リンク先のCSSファイルのURLを指定します。これもrel属性と同様にHTMLにおけるa要素を使う際に活躍します。hypertext referenceの略称です。
+                </li>
+                <li>
+                  type属性 &#58; リンク先のMIMEタイプを指定します。MIMEはMultipurpose Internet Mail Extensionsの略です。ここではtext&sol;cssと書きます。
+                </li>
+                <li>
+                  media属性 &#58; CSSを適用するにあたって、link要素がリンクさせた対象のリソースがどのようなメディアにするかを指定します。今回はallです。
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </p>
     </main>
     <footer>
         <p>Copyright © 2023 Kenta Yokota's Blog</p>
