@@ -27,6 +27,9 @@ pre {
   padding: 10px;
   width: calc(100% - 40px);
 }
+code {
+  width: calc(100% - 40px);
+}
 
 /* 本文を赤色にする */
 p.h1,h2,h3,h4,h5,h6,main,footer,ul,li,nav,body {
