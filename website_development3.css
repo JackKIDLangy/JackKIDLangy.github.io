@@ -1,7 +1,9 @@
-h1 {
-    font-family: "Yu Mincho";
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    color: #8B0000;
-  }
+header, h1, h2,h3 {
+  color: darkred;
+  font-family: 'Yu Mincho', serif;
+}
+body {
+  background-color: lightgray;
+  font-family: 'Yu Mincho', serif;
+}
+
