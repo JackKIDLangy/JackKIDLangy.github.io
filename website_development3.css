@@ -25,18 +25,9 @@ pre {
   padding: 10px;
 }
 
-body {
-  background-image: url("C:/Users/Kenta Yokota/JackKIDLangy/JackKIDLangy.github.io/icon.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
 /* 本文を赤色にする */
 p.h1,h2,h3,h4,h5,h6,main,footer,ul,li,nav,body {
-color: black;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-font-size: larger;
+color: rgb(0, 0, 0);
 }
 pre,code {
 background-color:black;
