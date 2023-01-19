@@ -4,46 +4,26 @@
     <title>横田健太のWebサイト開発入門 第2講</title>
     <link rel="stylesheet" type="text/css" href="website_development3.css">
     <style>
-        pre {
-          background-color: black;
-          color: white;
-          padding: 16px;
+      /* 背景画像を薄くする */
+      body {
+          background-image: url("C:/Users/Kenta Yokota/JackKIDLangy/JackKIDLangy.github.io/icon.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+      }
+  
+      /* 本文を赤色にする */
+      p.h1,h2,h3,h4,h5,h6,main,footer,ul,li {
+        color: black;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-size: larger;
+      }
+      pre,code {
+    background-color:black;
+    color:white;
         }
-    
-        code {
-          font-family: 'Source Code Pro', monospace;
-        }
-    
-        /* Keywords */
-        code span.kw {
-          color: #569CD6;
-        }
-    
-        /* Types */
-        code span.dt {
-          color: #4EC9B0;
-        }
-    
-        /* Strings */
-        code span.s {
-          color: #DCDCAA;
-        }
-    
-        /* Numbers */
-        code span.n {
-          color: #9CDCFE;
-        }
-    
-        /* Comments */
-        code span.c {
-          color: #57A64A;
-        }
-    
-        /* Punctuation */
-        code span.p {
-          color: white;
-        }
-      </style>
+
+    </style>
   </head>
   <body>
     <header>
@@ -61,6 +41,8 @@
                 HTMLの文法の初歩
             </h2>
             それでは基本的なHTMLのコードの具体例を示し、解説します。
+        <div class="code-container">
+        <div class="code-title">はじめてのHTMLコード</div>
             <pre>
                 <code>
                     &lt;!DOCTYPE html&gt;
@@ -80,7 +62,7 @@
                          &lt;/html&gt;
                 </code>
             </pre>
-    
+        </div>
     実際にHTMLのコードを見て気づいた人は沢山いるでしょうが、不等号がコードで多く書かれていますね。<br>
     そして不等号で始めて単語を書いて不等号で閉じるということをしています。<br>
     そしてその不等号はすべて半角です。<br>
@@ -88,12 +70,17 @@
     タグは不等号の次にスラッシュ(/)を入れたタグとペアで使われます。
     そのひとかたまりを要素と呼びます。<br>
     例えば先ほど示したコード内にある、<br>
+    <div class="code-container">
+        <div class="code-title">要素の具体例</div>
     <pre>
         <code>
             &lt;li>列挙したいもの1&gt;/li&gt;
         </code>
     </pre>
+</div>
     が1つの要素となっています。これをli要素と呼びます。同様に、
+    <div class="code-container">
+        <div class="code-title">要素の具体例その2</div>
     <pre>
         <code>
             &lt;ul&gt;
@@ -104,13 +91,15 @@
           </ul>
         </code>
     </pre>
+</div>
     をul要素と呼びます。新しい用語がどんどん出てきてつらいかもしれませんが、まだ続きますよ。例えば、
     <pre>
         <code>
             &lt;li>列挙したいもの1&gt;/li&gt;
         </code>
     </pre>
-    における<pre>&lt;li&gt;</pre>を開始タグと呼びます。そしてスラッシュ(/)をつけている<pre>&lt;/li&gt;</pre>を終了タグと呼びます。<br>
+    における
+    <pre>&lt;li&gt;</pre>を開始タグと呼びます。そしてスラッシュ(/)をつけている<pre>&lt;/li&gt;</pre>を終了タグと呼びます。<br>
     つまり、まとめると要素は開始タグと終了タグのペアで構成されています。<br>
     そしてそれぞれの要素は不等号で囲まれていて、開始タグは<pre>&lt;使いたいタグの名前&gt;</pre>で終了タグは<pre>&lt;/使いたいタグの名前&gt;</pre>です。<br>
     終了タグのスラッシュ(/)を忘れないようにしてください。<br>
@@ -149,6 +138,8 @@
     </pre>
     というエンティティを使います。<br>
     具体例を見るのが一番手っ取り早いですから、今まであなたが読んできたこの文章が一体どのように書かれているか先ほどの説明を引用してから解説してみます。<br>
+    <div class="code-container">
+        <div class="code-title">さっきまであなたが読んでいた文章再掲</div>
     <pre>
         <code>
             <pre>
@@ -169,6 +160,7 @@
             といった感じでタグの一般的な使い方がわかったと思います。<br>
         </code>
     </pre>
+</div>
     のように、例えば左にとんがっている不等号をみなさんに説明するために、実際にそのまま表示するように、<br>
     <pre>
         <code>

@@ -4,45 +4,25 @@
     <title>横田健太のWebサイト開発入門 第3講</title>
     <link rel="stylesheet" href="website_development3.css" type="text/css" media  = "all">
     <style>
-      pre {
-        background-color: black;
-        color: white;
-        padding: 16px;
+      /* 背景画像を薄くする */
+      body {
+          background-image: url("C:/Users/Kenta Yokota/JackKIDLangy/JackKIDLangy.github.io/icon.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
       }
   
-      code {
-        font-family: 'Source Code Pro', monospace;
+      /* 本文を赤色にする */
+      p.h1,h2,h3,h4,h5,h6,main,footer,ul,li {
+        color: black;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-size: larger;
       }
-  
-      /* Keywords */
-      code span.kw {
-        color: #569CD6;
-      }
-  
-      /* Types */
-      code span.dt {
-        color: #4EC9B0;
-      }
-  
-      /* Strings */
-      code span.s {
-        color: #DCDCAA;
-      }
-  
-      /* Numbers */
-      code span.n {
-        color: #9CDCFE;
-      }
-  
-      /* Comments */
-      code span.c {
-        color: #57A64A;
-      }
-  
-      /* Punctuation */
-      code span.p {
-        color: white;
-      }
+      pre,code {
+    background-color:black;
+    color:white;
+        }
+
     </style>
   </head>
   <body>
@@ -89,6 +69,8 @@
               </code>
             </pre>
             と今現在存在しています。これを何かしらレイアウトなどのデザイン変更の対象として、CSSのコードを書きます。<br>
+            <div class="code-container">
+              <div class="code-title">はじめてのCSS</div>
             <pre>
               <code>
                 h1 {
@@ -100,12 +82,13 @@
                 }
               </code>
             </pre>
+          </div>
             まずこんな感じで書いてみました。これから説明していきますね。<br>
             第1行目ではh1と書かれてその後に「{」という日本語で言えば中かっこでしょうか大かっこでしょうか、なんていうのかよく知らないですがそれがありますね。
             この行では、早速HTMLの何の要素のレイアウトなどデザインをこれから設定していくのかというこで、
             そういう行為の対象となるHTMLのある要素を1つ決めるのです。この部分をCSSではセレクターと言います。<br>
             第2行目はフォントファミリーの指定をしているのですが、ざっくり言えばフォントファミリーとはHTMLの文字の種類を指定するようなプロパティが書かれています。じゃあプロパティってなんやねんっていうと、
-            要素のスタイルを指定するものです。だから、font-family:	&quot;フォント名	&quot; って書くとフォントが指定できるのです。僕はserifにしてみました。なんでって?ググって出てきたものからテキトーに選んだだけで意味なんてないですよ（笑）。
+            要素のスタイルを指定するものです。だから、font-family:	&quot;フォント名	&quot; って書くとフォントが指定できるのです。僕はYu Minchoにしてみました。なんでって?ググって出てきたものからテキトーに選んだだけで意味なんてないですよ（笑）。
             第3行目では何をしているのかはもう簡単で、フォントの大きさを指定しています。36pxというのはプロパティ値と言います。単に値とも言います。<br>
             第4行目はフォントを太字にしています。<br>
             第5行目では文字列を中央に寄せています。WordやPowerPointなんか使っている人ならすぐわかりますね、
@@ -113,25 +96,34 @@
             第6行目では文字列の色を指定しています。colorというプロパティを使っています。
             このプロパティではあなたの好きなように文字の色を決めることができます。僕は暗い赤が好きでそうしてみました。
             文字の色を決める(指定する)方法は色々とあるらしいですが、ググったら大抵見つかります。例えばすごく簡単な例を出すと、
+            <div class="code-container">
+              <div class="code-title">フォントを青色にする</div>
             <pre>
               <code>
                 color: blue&#059;
               </code>
             </pre>
+          </div>
             と書けば青色になりますし、緑にしたかったら、<br>
+            <div class="code-container">
+              <div class="code-title">フォントを緑にする</div>
             <pre>
               <code>
                 color: green&#059;
               </code>
             </pre>
+          </div>
             と書けばよいです。でも他にもやりかたがあり僕は直接色の名前を表す英単語をcolorプロパティでは使っていませんね、
             HEXという方法を使いました。HEXというのは16進数で色を表現する方法です。
             緑色にしたかったらさっきのように色の英単語ではなくHEXで次のようになります。<br>
+            <div class="code-container">
+              <div class="code-title">HEXでフォントを緑にする</div>
             <pre>
               <code>
                 color: &#035;00ff00&#059;
               </code>
             </pre>
+          </div>
             といった感じです。詳しくは今ここでは触れません。<br>
             第7行目でこのセレクターの終わりを示してこれで終わりです。セレクターの終わりにもかっこは必要なので、かっこで必ず閉じてください。<br>
             そしてかっこのかたまりを宣言ブロックと言います。というかどうでもよいかもしれませんが、宣言ブロックの中身のプロパティの終わりにはセミコロンを使っていて、C言語を思い出しましたね。<br>
@@ -157,11 +149,14 @@
               link要素はHTMLのコードと外部のファイルやページ、それはCSSだけでなく画像などでも使うのですが、
               そういったものを関連付ける機能があります。
               それはもう名前から明らかですね。そして具体的にはこう書きます。
+              <div class="code-container">
+                <div class="code-title">HTMLにlink要素を書いてCSSと関連付ける</div>
               <pre>
                 <code>
                   &lt;link rel=&quot;stylesheet&quot; href=&quot;website_development3.css&quot; type=&quot;text/css&quot; media  = &quot;all&quot;&gt;
                 </code>
               </pre>
+            </div>
               といった感じで書きます。詳しく説明すると、relもhrefもtypeもmediaもすべてlink要素です。それぞれは下記の機能を持っています。<br>
               <ul>
                 <li>
@@ -185,7 +180,7 @@
           これでどうでしょう、第2講のページ<br>
           <a href="website_development2.html">横田健太のWebサイト開発入門第2講</a></li><br>
           と比べたら明らかに違いますよね?スクショしたので載せますがこのように変化するのです！<br>
-          <img src="C:\Users\Kenta Yokota\JackKIDLangy\JackKIDLangy.github.io\screen_shot1.png" width="1000" height="1000">
+          <img src="C:/Users\Kenta Yokota/JackKIDLangy/JackKIDLangy.github.io/screen_shot1.png" width="1000" height="1000">
         </p>
         <p>
           <h2>
