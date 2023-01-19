@@ -7,7 +7,7 @@ body {
   font-family: 'Yu Mincho', serif;
 }
 .code-container {
-  border: 1px solid gray;
+  border: 5px solid rgb(0, 0, 0);
   padding: 20px;
 }
 
@@ -32,5 +32,9 @@ color: rgb(0, 0, 0);
 pre,code {
 background-color:black;
 color:white;
+}
+
+#specific-image {
+   margin: 0 auto;
 }
 
