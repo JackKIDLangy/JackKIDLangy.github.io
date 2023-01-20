@@ -34,6 +34,7 @@ body {
 }
 
 pre {
+  text-align: left;
   border: 1px solid gray;
   background-color: black;
   color: white;
